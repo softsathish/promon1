@@ -1,0 +1,46 @@
+*{
+	font-family: verdana; font-size:4vw;
+}
+body{
+	margin:0px; padding:0px
+}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+.container{width:98%;margin:0px auto;border:1px solid #ccc;background: url("../images/mainBG.png") repeat}
+header{background:#fff;}
+header h1{font-size:8vw; padding:4%; text-align: center;margin:0px;font-weight: normal;}
+.healthIndicator{text-align: center;}
+.greenBorder,.orangeBorder{width:10vm;}
+.greenBorder span,.orangeBorder span{background: #fff;border: 10px solid;border-radius: 18vw;
+	display: block;font-size: 6vw;padding: 7vmax 4vmax;max-width: 15vw;margin: 0px auto}
+.healthIndicator .greenBorder span {border-color:green;}
+.healthIndicator .orangeBorder span {border-color:orange}
+.pull-left{float:left;}.pull-right{float:right;}
+.healthIndicator h2{font-size:5vw;font-weight: normal;}
+.healthIndicator .pull-left{margin:0px 1%;padding:2%;font-size: 4vw;width:44%;}
+.productsList{margin:0px 1%;}
+.productsList>p{margin:0px;padding:5% 0px 2% 0px;font-size:5vw}
+.productsList>div{background:#fff;font-weight: normal;border-bottom:1px solid #ccc;padding:1vw;}
+.productsList .orange{border-left:0.5em solid orange;}.productsList .orange span:nth-of-type(2){color:orange;}
+.productsList .red{border-left:0.5em solid red;}.productsList .red span:nth-of-type(2){color:red;}
+.productsList .green{border-left:0.5em solid green;}.productsList .green span:nth-of-type(2){color:green;}
+.productsList span{display: inline-block;font-size:6vw;font-weight: normal;}
+.productsList span:nth-of-type(2){float:right;}
+.productDetails{padding:10px;}
+.borderBottom{border-bottom: 1px solid #ccc}
+.orangeCircle{border: 3px solid orange;border-radius: 100%;margin: 0;padding:2.5vw 1vw;width: 8vw;font-size: 3vw}
+.productDetails h5{margin:0px; padding:0px;font-size: 5vw;font-weight: normal;}
+.productDetails span{font-size: 3vw;vertical-align: super;}
+.redAlert .pull-left:nth-of-type(1){color:#000}.redAlert .pull-right{color:red}
+.disabledAlert .pull-left{color:#ccc}.disabledAlert .pull-right{color:#ccc}
+.orangeAlert .pull-left{color:#000;}.orangeAlert .pull-right{color:orange;}
+.halfBox{width:45%;}
+.Alerts .pull-left:nth-of-type(1){width:5vw;line-height: 150%;text-align: center;}
+.Alerts .pull-right{font-size: 3vw;width:80%;line-height: 200%}
+.serviceDetails .pull-left{width:1vw;}
+.serviceDetails .pull-right{width:18vw}
+.serviceDetails .pull-right:nth-of-type(2){font-size: 3vw;color: #999;width:12vw;padding:1.1vw 0;line-height: 125%}
+.healthIndicator .badge.badge-info {border-radius: 100%;padding: 8vw 5vw;}
