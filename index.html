@@ -1,0 +1,130 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Promon+</title>
+		<link href="css\styles.css" type="text/css" rel="stylesheet" />
+		<script src="scripts/angular.js"></script>
+		<script>
+			var promonApp = new angular.module('promonApp',[]);
+			promonApp.controller('DashboardController',function($scope){
+				$scope.promonJSON = {	
+					promonTop: {
+							hostHealth: 90,
+							serviceHealth: 80
+					},
+					productList:{
+							count: 4,
+							SNTC:{
+									aggregateAverage:70,
+									hostAverage:80,
+									serviceAverage:20,
+									hostCount:3,
+									serviceCount:120,
+									hostDetails: {
+											criticalCount:12,
+											unreachable:0,
+											down:23,
+											critical:3,
+											warning:4
+									},
+									serviceDetails: {
+											criticalCount:12,
+											unreachable:0,
+											down:23,
+											critical:3,
+											warning:4
+									},
+									settings_hostAverageWeightage:10,
+									settings_serviceAverageWeightage:90,
+																
+							}
+							
+					}
+				 }
+			});
+			
+
+		</script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-app="promonApp">
+		<div class="container" ng-controller="DashboardController">
+			<header>
+				<h1>ProMon+</h1>
+			</header>
+			<div class="healthIndicator clearfix" align="center">
+				<div class="pull-left greenBorder">
+					<h2>Host Health</h2>
+					<span class="badge badge-info">{{ promonJSON.promonTop.hostHealth }}%</span>
+				</div>
+				<div class="pull-left orangeBorder">
+					<h2>Service Health</h2>
+					<span class="badge badge-info">{{ promonJSON.promonTop.serviceHealth }}%</span>
+				</div>
+			</div>
+			<div class="productsList">
+				<p>Products({{ promonJSON.productList.count }})</p>
+				<div class="orange"><span>SNTC 1.x</span><span>70%</span>
+					<div class="clearfix productDetails">
+						<div class="pull-left halfBox">
+							<div class="clearfix borderBottom hostsDetails">
+								<div class="pull-left halfBox">
+									<h5>Hosts</h5>
+									<span>172</span>
+								</div>
+								<div class="pull-right halfBox">
+									<h6 class="pull-right orangeCircle">75%</h6>
+								</div>
+							</div>
+							<div class="clearfix redAlert Alerts">
+								<div class="pull-left">1</div>
+								<div class="pull-right borderBottom">Unreachable</div>
+							</div>
+							<div class="clearfix disabledAlert Alerts">
+								<div class="pull-left">0</div>
+								<div class="pull-right borderBottom">Down</div>
+							</div>
+						</div>
+						<div class="pull-right halfBox">
+							<div class="clearfix borderBottom">
+								<div class="pull-left halfBox">
+									<h5>Services</h5>
+									<span>1529</span>
+								</div>
+								<div class="pull-right halfBox">
+									<h6 class="pull-right orangeCircle">80%</h6>
+								</div>
+							</div>
+							<div class="clearfix redAlert Alerts serviceDetails">
+								<div class="pull-left">8</div>
+								<div class="pull-right borderBottom">1 Ack</div>
+								<div class="pull-right borderBottom">Critical</div>
+								
+							</div>
+							<div class="clearfix orangeAlert Alerts serviceDetails">
+								<div class="pull-left">11</div>
+								<div class="pull-right borderBottom">1 Ack</div>
+								<div class="pull-right borderBottom">Warning</div>
+							</div>
+							<div class="clearfix disabledAlert Alerts serviceDetails">
+								<div class="pull-left">0</div>
+								<div class="pull-right borderBottom">&nbsp;</div>
+								<div class="pull-right borderBottom">Pending</div>
+							</div>
+							<div class="clearfix Alerts serviceDetails">
+								<div class="pull-left">1</div>
+								<div class="pull-right borderBottom">&nbsp;</div>
+								<div class="pull-right borderBottom">Unknown</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="red"><span>SNTC 1.x</span><span>80%</span></div>
+				<div class="green"><span>SNTC 1.x</span><span>98%</span></div>
+				<div class="green"><span>SNTC 1.x</span><span>95%</span></div>
+			</div>
+		</div>
+	</body>
+</html>
